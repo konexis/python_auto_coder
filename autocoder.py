@@ -4,8 +4,9 @@ from pynput import keyboard
 
 input_file = filedialog.askopenfilename()
 interval = 0.02
-counter = 0
 key_to_press = keyboard.Key.pause
+counter = 0
+
 
 with open(input_file, 'r') as file:
     lines = file.readlines()
