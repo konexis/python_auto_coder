@@ -12,11 +12,13 @@ from pynput import keyboard
 
 
 counter = 0
+key_to_press = keyboard.Key.pause
 
 def on_press(key):
     global counter
+
     try:
-        if key == keyboard.Key.pause:
+        if key == key_to_press:
             pyautogui.write(lines[counter], interval=interval)
             counter +=1
         if key == keyboard.Key.esc:
